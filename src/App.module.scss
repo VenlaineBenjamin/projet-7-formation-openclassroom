@@ -1,0 +1,21 @@
+@use "./styles/layouts/responsif" as responsif;
+
+.pageLayout {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-rows: 7rem 1fr 10rem;
+    width: 100%;
+    height: 100vh;
+    .header {
+        grid-area: header;
+    }
+    .main {
+        grid-area: main;
+    }
+    .footer {
+        grid-area: footer;
+    }
+}

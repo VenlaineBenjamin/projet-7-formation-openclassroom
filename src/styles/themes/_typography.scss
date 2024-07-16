@@ -1,0 +1,20 @@
+@use "../layouts/responsif" as responsif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+.btn {
+    font-family: "Montserrat", sans-serif;
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    @include responsif.xs {
+        font-size: 0.75rem;
+    }
+    &:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+    }
+    &:active {
+        color: black;
+    }
+}

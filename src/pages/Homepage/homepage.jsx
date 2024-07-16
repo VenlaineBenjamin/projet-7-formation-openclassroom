@@ -1,8 +1,25 @@
+import imgLandscape from "../../assets/IMGlandscape.jpg";
+import HomeCard from "../../components/HomeCard/HomeCard";
+import { data } from "../../data/data";
+import styles from "./Homepage.module.scss";
+
 export default function Homepage() {
     return (
         <div>
-            <h1>Bienvenue sur la page d&apos;acceille de kasa</h1>
-            <p>Application react installer avec vite js</p>
+            <div className={`flex justify-content-center ${styles.banner}`}>
+                <p>Chez vous, partout et ailleurs</p>
+                <img src={imgLandscape} alt="image paysage" />
+            </div>
+            <div className={styles.cardContainer}>
+                {data.map((item) => (
+                    <HomeCard
+                        key={item.id}
+                        imgSource={item.cover}
+                        altTitle={item.title}
+                        cardTitle={item.title}
+                    />
+                ))}
+            </div>
         </div>
     );
 }
