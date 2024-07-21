@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import imgLandscape from "../../assets/IMGlandscape.jpg";
 import HomeCard from "../../components/HomeCard/HomeCard";
 import { data } from "../../data/data";
@@ -12,12 +13,13 @@ export default function Homepage() {
             </div>
             <div className={styles.cardContainer}>
                 {data.map((item) => (
-                    <HomeCard
-                        key={item.id}
-                        imgSource={item.cover}
-                        altTitle={item.title}
-                        cardTitle={item.title}
-                    />
+                    <Link to={`/${item.id}`} key={item.id}>
+                        <HomeCard
+                            imgSource={item.cover}
+                            altTitle={item.title}
+                            cardTitle={item.title}
+                        />
+                    </Link>
                 ))}
             </div>
         </div>

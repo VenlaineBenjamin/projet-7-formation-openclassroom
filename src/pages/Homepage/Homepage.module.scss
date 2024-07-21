@@ -40,21 +40,24 @@
 .cardContainer {
     display: grid;
     grid-template-columns: repeat(3, 21.25rem);
-    justify-content: space-between;
+    grid-template-rows: repeat(2, 21.25rem);
+    grid-auto-rows: 21.25rem;
+    justify-content: center;
     justify-items: center;
     gap: 1.5rem;
     margin: 3rem auto;
     background-color: #f6f6f6;
     padding: 3rem;
-    max-width: 72.5rem;
+    max-width: fit-content;
     border-radius: 1.5625rem;
     @include responsif.xs {
         background-color: transparent;
         width: 100%;
         grid-template-columns: repeat(1, 21.25rem);
-        padding: 1.5rem;
+        padding: 1.5rem 0;
+        margin: 1.5rem auto;
     }
-    @include responsif.sm {
+    @include responsif.md {
         grid-template-columns: repeat(2, 21.25rem);
     }
 }

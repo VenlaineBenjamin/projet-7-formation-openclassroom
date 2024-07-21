@@ -3,9 +3,6 @@ import logoKasa from "../../assets/Logo-Kasa.png";
 import styles from "./Header.module.scss";
 
 export default function Header() {
-    const locationLink = window.location.pathname;
-    console.log(locationLink);
-
     return (
         <header
             className={`flex justify-content-between align-items-center ${styles.header}`}
