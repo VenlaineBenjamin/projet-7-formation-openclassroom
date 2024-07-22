@@ -7,15 +7,18 @@
         "main"
         "footer";
     grid-template-rows: 7rem 1fr 10rem;
-    width: 100%;
     height: 100vh;
+    margin: 0 auto;
     .header {
         grid-area: header;
+        max-width: 77.5rem;
     }
     .main {
         grid-area: main;
+        max-width: 77.5rem;
     }
     .footer {
         grid-area: footer;
+        width: 100%;
     }
 }

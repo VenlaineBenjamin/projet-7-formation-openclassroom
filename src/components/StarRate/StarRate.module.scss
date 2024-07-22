@@ -1,0 +1,9 @@
+.starRating {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    i {
+        font-size: 1.5rem;
+    }
+}
