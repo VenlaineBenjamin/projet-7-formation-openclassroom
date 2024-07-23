@@ -16,7 +16,9 @@ export default function AppartPage() {
                             key={item.id}
                         >
                             <Carrousel pictures={item.pictures} />
-                            <div className="flex flex-row justify-content-between">
+                            <div
+                                className={`flex flex-row justify-content-between ${styles.appartComponents}`}
+                            >
                                 <div
                                     className={`flex flex-column ${styles.appartInfo}`}
                                 >

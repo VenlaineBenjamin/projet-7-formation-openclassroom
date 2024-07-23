@@ -1,3 +1,5 @@
+@use "../../styles/layouts/responsif" as responsif;
+
 .starRating {
     display: flex;
     justify-content: flex-end;
@@ -5,5 +7,8 @@
     gap: 0.5rem;
     i {
         font-size: 1.5rem;
+        @include responsif.xs {
+            font-size: 0.8rem;
+        }
     }
 }

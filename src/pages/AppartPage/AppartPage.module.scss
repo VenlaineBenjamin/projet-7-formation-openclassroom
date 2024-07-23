@@ -1,71 +1,85 @@
 @use "../../styles/layouts/responsif" as responsif;
 
 .appartContainer {
+    width: 70%;
     margin: 0 auto;
     @include responsif.xs {
-        width: 20.9375rem;
+        width: 90%;
     }
     @include responsif.sm {
-        width: 30.9375rem;
+        width: 80%;
     }
     @include responsif.md {
-        width: 40.9375rem;
+        width: 70%;
     }
-    .appartInfo {
-        max-width: 50rem;
-        .appartTitle {
-            color: #ff6060;
-            margin-top: 1.8rem;
-            font-size: 2.25rem;
-            font-weight: 500;
-            @include responsif.xs {
-                font-size: 1.125rem;
-            }
+    .appartComponents {
+        @include responsif.xs {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
         }
-        .appartLocation {
-            color: #000;
-            margin-top: 1rem;
-            font-size: 1.125rem;
-            font-weight: 500;
-            @include responsif.xs {
-                font-size: 0.875rem;
-            }
-        }
-        .appartTags {
-            gap: 0.62rem;
-            margin-top: 1.25rem;
-            .appartTag {
-                background-color: #ff6060;
-                color: white;
-                min-width: 7.1875rem;
-                text-align: center;
-                font-size: 0.875rem;
-                font-weight: 700;
-                padding: 0.5rem;
-                border-radius: 0.625rem;
-                margin: auto 0;
+        .appartInfo {
+            max-width: 50rem;
+            .appartTitle {
+                color: var(--color-primary);
+                margin-top: 1.8rem;
+                font-size: 2.25rem;
+                font-weight: 500;
                 @include responsif.xs {
-                    min-width: 5.25rem;
-                    font-size: 0.625rem;
+                    font-size: 1.125rem;
+                }
+            }
+            .appartLocation {
+                color: #000;
+                margin-top: 1rem;
+                font-size: 1.125rem;
+                font-weight: 500;
+                @include responsif.xs {
+                    font-size: 0.875rem;
+                }
+            }
+            .appartTags {
+                gap: 0.62rem;
+                margin-top: 1.25rem;
+                .appartTag {
+                    background-color: var(--color-primary);
+                    color: white;
+                    min-width: 7.1875rem;
+                    text-align: center;
+                    font-size: 0.875rem;
+                    font-weight: 700;
+                    padding: 0.5rem;
+                    border-radius: 0.625rem;
+                    margin: auto 0;
+                    @include responsif.xs {
+                        min-width: 5.25rem;
+                        font-size: 0.625rem;
+                    }
                 }
             }
         }
-    }
 
-    .appartUser {
-        margin-top: 1rem;
-        gap: 0.62rem;
-    }
-    .appartUserPicture {
-        width: 4rem;
-        height: 4rem;
-        border-radius: 50%;
-    }
-    .appartUserName {
-        color: #ff6060;
-        text-align: right;
-        margin-right: 1rem;
-        font-size: 1.125rem;
-        font-weight: 500;
+        .appartUser {
+            margin-top: 1rem;
+            gap: 0.62rem;
+            @include responsif.xs {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                margin-top: 0;
+            }
+        }
+        .appartUserPicture {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+        }
+        .appartUserName {
+            color: var(--color-primary);
+            text-align: right;
+            margin-right: 1rem;
+            font-size: 1.125rem;
+            font-weight: 500;
+        }
     }
 }

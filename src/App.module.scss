@@ -10,12 +10,30 @@
     height: 100vh;
     margin: 0 auto;
     .header {
+        width: 70%;
         grid-area: header;
-        max-width: 77.5rem;
+        @include responsif.xs {
+            width: 90%;
+        }
+        @include responsif.sm {
+            width: 80%;
+        }
+        @include responsif.md {
+            width: 70%;
+        }
     }
     .main {
+        width: 70%;
         grid-area: main;
-        max-width: 77.5rem;
+        @include responsif.xs {
+            width: 90%;
+        }
+        @include responsif.sm {
+            width: 80%;
+        }
+        @include responsif.md {
+            width: 70%;
+        }
     }
     .footer {
         grid-area: footer;

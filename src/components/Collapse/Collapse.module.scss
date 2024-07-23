@@ -1,0 +1,36 @@
+@use "../../styles/layouts/responsif" as responsif;
+
+.collapseTitle {
+    width: 64%;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 1.88rem;
+    background-color: var(--color-primary);
+    border-radius: 0.3125rem;
+    color: white;
+    font-weight: 700;
+    @include responsif.xs {
+        width: 90%;
+    }
+    @include responsif.sm {
+        width: 80%;
+        margin: 0 1.19rem;
+        margin-top: 1.25rem;
+    }
+    @include responsif.md {
+        width: 70%;
+    }
+}
+
+.collapseContent {
+    background-color: #f6f6f6;
+    padding: 1.25rem;
+    border-radius: 0 0 0.3125rem 0.3125rem;
+    max-width: 64%;
+    margin: 0 auto;
+    @include responsif.xs {
+        max-width: 100%;
+        margin: 0 1.19rem;
+    }
+}

@@ -1,23 +1,17 @@
 @use "../../styles/layouts/responsif" as responsif;
 
 .header {
-    padding: 0 3rem;
-    min-width: 7rem;
-    max-width: 100%;
+    width: 70%;
     margin: 0 auto;
-    gap: 44rem;
     min-height: 7rem;
     @include responsif.xs {
-        padding: 0 1.5rem;
-        gap: 3rem;
+        width: 90%;
     }
     @include responsif.sm {
-        padding: 0 2rem;
-        gap: 22rem;
+        width: 80%;
     }
     @include responsif.md {
-        padding: 0 3rem;
-        gap: 33rem;
+        width: 70%;
     }
     img {
         height: 4.25rem;
@@ -26,7 +20,9 @@
         }
     }
     ul {
-        display: flex;
         gap: 3.5rem;
+        @include responsif.xs {
+            gap: 1.62rem;
+        }
     }
 }

@@ -8,7 +8,7 @@ export default function Header() {
             className={`flex justify-content-between align-items-center ${styles.header}`}
         >
             <img src={logoKasa} alt="Logo de Kasa" />
-            <ul>
+            <ul className="flex">
                 <NavLink end className="btn" to="/">
                     Accueil
                 </NavLink>
