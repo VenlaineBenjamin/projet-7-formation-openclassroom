@@ -1,0 +1,13 @@
+.InfoCollapseTitle {
+    background: var(--color-primary);
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0 1rem;
+    border-radius: 0.625rem 0.625rem;
+}
+.InfoCollapseContent {
+    padding: 1rem;
+    background: #f6f6f6;
+    line-height: 1.4rem;
+}

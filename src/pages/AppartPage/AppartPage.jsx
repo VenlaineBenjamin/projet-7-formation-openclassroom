@@ -1,4 +1,5 @@
 import Carrousel from "../../components/Carrousel/Carrousel";
+import InfoCollapse from "../../components/InfoCollapse/InfoCollapse";
 import StarRate from "../../components/StarRate/StarRate";
 import { data } from "../../data/data";
 import styles from "./AppartPage.module.scss";
@@ -64,6 +65,26 @@ export default function AppartPage() {
                                         />
                                     </div>
                                     <StarRate rating={item.rating} />
+                                </div>
+                            </div>
+                            <div
+                                className={`flex flex-row ${styles.collapseContainer}`}
+                            >
+                                <div
+                                    className={`flex flex-column justify-content-start flex-fill ${styles.collapse}`}
+                                >
+                                    <InfoCollapse title="Description">
+                                        {item.description}
+                                    </InfoCollapse>
+                                </div>
+                                <div
+                                    className={`flex flex-column justify-content-start flex-fill ${styles.collapse}`}
+                                >
+                                    <InfoCollapse title="Équipements">
+                                        {item.equipments.map((equipment) => (
+                                            <p key={equipment}>{equipment}</p>
+                                        ))}
+                                    </InfoCollapse>
                                 </div>
                             </div>
                         </div>

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logoKasa from "../../assets/Logo-Kasa.png";
 import styles from "./Header.module.scss";
 
@@ -7,7 +7,9 @@ export default function Header() {
         <header
             className={`flex justify-content-between align-items-center ${styles.header}`}
         >
-            <img src={logoKasa} alt="Logo de Kasa" />
+            <Link to="/">
+                <img src={logoKasa} alt="Logo de Kasa" />
+            </Link>
             <ul className="flex">
                 <NavLink end className="btn" to="/">
                     Accueil

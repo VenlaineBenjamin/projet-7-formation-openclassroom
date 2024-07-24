@@ -5,7 +5,7 @@ import styles from "./Collapse.module.scss";
 export default function Collapse({ children, description }) {
     const [collapsed, setCollapsed] = useState(true);
     return (
-        <div>
+        <>
             <h2
                 onClick={() => setCollapsed(!collapsed)}
                 className={`flex justify-content-between align-items-center ${styles.collapseTitle}`}
@@ -25,6 +25,6 @@ export default function Collapse({ children, description }) {
             >
                 {children}
             </div>
-        </div>
+        </>
     );
 }

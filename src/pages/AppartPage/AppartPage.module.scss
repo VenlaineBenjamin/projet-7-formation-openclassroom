@@ -82,4 +82,15 @@
             font-weight: 500;
         }
     }
+
+    .collapseContainer {
+        gap: 4.75rem;
+        @include responsif.xs {
+            flex-direction: column;
+            gap: 0;
+        }
+        .collapse {
+            margin-top: 1.5rem;
+        }
+    }
 }

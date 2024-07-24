@@ -61,7 +61,7 @@
     @include responsif.xs {
         background-color: transparent;
         grid-template-columns: repeat(1, 1fr);
-        padding: 1.5rem 0;
+        padding: 0;
         margin: 1.5rem auto;
         max-width: 90%;
     }
