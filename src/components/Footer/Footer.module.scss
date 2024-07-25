@@ -4,12 +4,13 @@
     background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 4.12rem 0 1.8rem 0;
     margin-top: 1.88rem;
     z-index: 100;
     gap: 1.78rem;
     @include responsif.xs {
         gap: 0.5rem;
+        padding: 4.12rem 0 3.62rem 0;
     }
     .footerLogo {
         gap: 0.5rem;

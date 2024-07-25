@@ -5,6 +5,14 @@ import styles from "./Carrousel.module.scss";
 export default function Carrousel({ pictures }) {
     const [currentPicture, setCurrentPicture] = useState(0);
 
+    const showArrow = () => {
+        if (pictures.length <= 1) {
+            return true;
+        } else {
+            return false;
+        }
+    };
+
     const nextPicture = () => {
         if (currentPicture === pictures.length - 1) {
             setCurrentPicture(0);
@@ -34,10 +42,10 @@ export default function Carrousel({ pictures }) {
             ))}
             <div className={styles.chevron}>
                 <div className={styles.left} onClick={previousPicture}>
-                    <ChevronLeft size={100} />
+                    {showArrow ? <ChevronLeft size={100} /> : ""}
                 </div>
                 <div className={styles.right} onClick={nextPicture}>
-                    <ChevronRight size={100} />
+                    {showArrow ? <ChevronRight size={100} /> : ""}
                 </div>
             </div>
         </div>

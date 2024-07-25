@@ -15,6 +15,7 @@
     }
     img {
         height: 4.25rem;
+        font-weight: 500;
         @include responsif.xs {
             height: 2.93006rem;
         }
