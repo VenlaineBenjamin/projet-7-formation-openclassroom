@@ -13,7 +13,7 @@ export default function Homepage() {
             </div>
             <div className={styles.cardContainer}>
                 {data.map((item) => (
-                    <Link to={`/${item.id}`} key={item.id}>
+                    <Link to={`/appartement/${item.id}`} key={item.id}>
                         <HomeCard
                             imgSource={item.cover}
                             altTitle={item.title}
