@@ -2,7 +2,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import styles from "./Carrousel.module.scss";
 
-export default function Carrousel({ pictures }) {
+export default function Carrousel({ pictures, altPicture }) {
     const [currentPicture, setCurrentPicture] = useState(0);
 
     const nextPicture = () => {
@@ -27,17 +27,17 @@ export default function Carrousel({ pictures }) {
                 <img
                     key={i}
                     src={picture}
-                    alt="picture"
+                    alt={altPicture}
                     className={styles.picture}
                     style={{ display: i === currentPicture ? "block" : "none" }}
                 />
             ))}
             <div className={styles.chevron}>
                 <div onClick={previousPicture}>
-                    <ChevronLeft className={styles.left} size={100} />
+                    <ChevronLeft className={styles.left} />
                 </div>
                 <div onClick={nextPicture}>
-                    <ChevronRight className={styles.right} size={100} />
+                    <ChevronRight className={styles.right} />
                 </div>
             </div>
             <div className={styles.counter}>

@@ -1,0 +1,21 @@
+@use "../../styles/layouts/responsif" as responsif;
+
+.appartTags {
+    gap: 0.62rem;
+    margin-top: 1.25rem;
+    .appartTag {
+        background-color: var(--color-primary);
+        color: white;
+        min-width: 7.1875rem;
+        text-align: center;
+        font-size: 0.875rem;
+        font-weight: 700;
+        padding: 0.5rem;
+        border-radius: 0.625rem;
+        margin: auto 0;
+        @include responsif.xs {
+            min-width: 5.25rem;
+            font-size: 0.625rem;
+        }
+    }
+}

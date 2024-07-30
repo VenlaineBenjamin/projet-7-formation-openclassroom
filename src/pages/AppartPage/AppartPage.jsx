@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import Carrousel from "../../components/Carrousel/Carrousel";
 import InfoCollapse from "../../components/InfoCollapse/InfoCollapse";
 import StarRate from "../../components/StarRate/StarRate";
+import Tags from "../../components/Tags/Tags";
 import { data } from "../../data/data";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import styles from "./AppartPage.module.scss";
@@ -19,7 +20,10 @@ export default function AppartPage() {
                 className={`flex flex-column ${styles.appartContainer}`}
                 key={appart.id}
             >
-                <Carrousel pictures={appart.pictures} />
+                <Carrousel
+                    pictures={appart.pictures}
+                    altPicture={appart.location}
+                />
                 <div
                     className={`flex flex-row justify-content-between ${styles.appartComponents}`}
                 >
@@ -28,17 +32,7 @@ export default function AppartPage() {
                         <p className={styles.appartLocation}>
                             {appart.location}
                         </p>
-
-                        <div
-                            key={appart.id}
-                            className={`flex flex-row flex-wrap ${styles.appartTags}`}
-                        >
-                            {appart.tags.map((tag) => (
-                                <p key={tag} className={styles.appartTag}>
-                                    {tag}
-                                </p>
-                            ))}
-                        </div>
+                        <Tags tags={appart.tags} />
                     </div>
                     <div
                         className={`flex flex-column align-items-center justify-content-between ${styles.appartUser}`}
