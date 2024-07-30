@@ -1,49 +1,14 @@
 import styles from "./StarRate.module.scss";
 
 export default function StarRate({ rating }) {
-    return (
-        <>
-            {rating === "1" ? (
-                <div className={styles.starRating}>
-                    <i className="fas fa-star star-active"></i>
-                    <i className="fas fa-star star-inactive"></i>
-                    <i className="fas fa-star star-inactive"></i>
-                    <i className="fas fa-star star-inactive"></i>
-                    <i className="fas fa-star star-inactive"></i>
-                </div>
-            ) : rating === "2" ? (
-                <div className={styles.starRating}>
-                    <i className="fas fa-star star-active"></i>
-                    <i className="fas fa-star star-active"></i>
-                    <i className="fas fa-star star-inactive"></i>
-                    <i className="fas fa-star star-inactive"></i>
-                    <i className="fas fa-star star-inactive"></i>
-                </div>
-            ) : rating === "3" ? (
-                <div className={styles.starRating}>
-                    <i className="fas fa-star star-active"></i>
-                    <i className="fas fa-star star-active"></i>
-                    <i className="fas fa-star star-active"></i>
-                    <i className="fas fa-star star-inactive"></i>
-                    <i className="fas fa-star star-inactive"></i>
-                </div>
-            ) : rating === "4" ? (
-                <div className={styles.starRating}>
-                    <i className="fas fa-star star-active"></i>
-                    <i className="fas fa-star star-active"></i>
-                    <i className="fas fa-star star-active"></i>
-                    <i className="fas fa-star star-active"></i>
-                    <i className="fas fa-star star-inactive"></i>
-                </div>
-            ) : rating === "5" ? (
-                <div className={styles.starRating}>
-                    <i className="fas fa-star star-active"></i>
-                    <i className="fas fa-star star-active"></i>
-                    <i className="fas fa-star star-active"></i>
-                    <i className="fas fa-star star-active"></i>
-                    <i className="fas fa-star star-active"></i>
-                </div>
-            ) : null}
-        </>
-    );
+    const stars = Array.from({ length: 5 }, (_, index) => (
+        <i
+            key={index}
+            className={`fas fa-star ${
+                index < rating ? "star-active" : "star-inactive"
+            }`}
+        ></i>
+    ));
+
+    return <div className={styles.starRating}>{stars}</div>;
 }
