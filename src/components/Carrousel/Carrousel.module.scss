@@ -11,13 +11,8 @@
     overflow: hidden;
     border-radius: 1.5625rem;
     @include responsif.xs {
-        width: 90%;
         height: 15.9375rem;
         border-radius: 0.625rem;
-    }
-    @include responsif.md {
-        width: 70%;
-        height: 27.9375rem;
     }
     img {
         width: 100%;
