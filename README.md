@@ -1,8 +1,9 @@
-# React + Vite
+# Kasa
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## projet 7 de la formation d'integrateur web sur openclasseroom
 
-Currently, two official plugins are available:
+### reàliser par Benjamin Verlaine
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![home page](./public/Opera%20Instantané_2024-07-30_142232_localhost.png "home page")
+
+![appartement page](./public/Opera%20Instantané_2024-07-30_142422_localhost.png "appartement page")
