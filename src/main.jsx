@@ -10,6 +10,8 @@ import ErrorPage from "./pages/ErrorPage/ErrorPage";
 import Homepage from "./pages/Homepage/Homepage";
 import "./styles/index.scss";
 
+// composant App qui affiche le header et le footer de l'application Kasa avec les routes de navigation react-router-dom vers les pages d'accueil, à propos, la page de l'appartement correspondant à l'id de l'appartement et la page d'erreur 404
+
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
         <Router>

@@ -7,6 +7,8 @@ import { data } from "../../data/data";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import styles from "./AppartPage.module.scss";
 
+// composant AppartPage qui prend en paramètre l'id de l'appartement et affiche les informations de l'appartement correspondant à cet id
+
 export default function AppartPage() {
     const { id } = useParams();
     console.log(id);

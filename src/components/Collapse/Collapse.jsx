@@ -2,6 +2,8 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import styles from "./Collapse.module.scss";
 
+// composant collapse qui prend en paramètre un titre et un contenu
+
 export default function Collapse({ children, description }) {
     const [collapsed, setCollapsed] = useState(true);
     return (

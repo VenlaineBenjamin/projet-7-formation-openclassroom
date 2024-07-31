@@ -2,9 +2,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import styles from "./Carrousel.module.scss";
 
+// composant carrousel qui prend en paramètre un tableau de photos des chevron pour passer à la photo suivante ou précédente et un compteur pour afficher le numéro de la photo actuelle
+
 export default function Carrousel({ pictures, altPicture }) {
     const [currentPicture, setCurrentPicture] = useState(0);
-
     const nextPicture = () => {
         if (currentPicture === pictures.length - 1) {
             setCurrentPicture(0);
@@ -12,7 +13,6 @@ export default function Carrousel({ pictures, altPicture }) {
             setCurrentPicture(currentPicture + 1);
         }
     };
-
     const previousPicture = () => {
         if (currentPicture === 0) {
             setCurrentPicture(pictures.length - 1);
@@ -20,7 +20,6 @@ export default function Carrousel({ pictures, altPicture }) {
             setCurrentPicture(currentPicture - 1);
         }
     };
-
     return (
         <div className={styles.pictureFrame}>
             {pictures.map((picture, i) => (

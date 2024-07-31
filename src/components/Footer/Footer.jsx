@@ -4,6 +4,8 @@ import letterK from "../../assets/VectorK.png";
 import letterS from "../../assets/VectorS.png";
 import styles from "./Footer.module.scss";
 
+// composant footer qui affiche le logo de Kasa et le texte de droits d'auteur
+
 export default function Footer() {
     return (
         <footer

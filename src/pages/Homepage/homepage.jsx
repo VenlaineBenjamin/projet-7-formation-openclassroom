@@ -4,6 +4,8 @@ import HomeCard from "../../components/HomeCard/HomeCard";
 import { data } from "../../data/data";
 import styles from "./Homepage.module.scss";
 
+// composant Homepage qui affiche une bannière et une liste d'appartements avec un lien de navigation react-router-dom vers la page de l'appartement correspondant à l'id de l'appartement
+
 export default function Homepage() {
     return (
         <div>

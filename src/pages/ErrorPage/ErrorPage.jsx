@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "./ErrorPage.module.scss";
 
+// composant ErrorPage qui affiche un message d'erreur 404 et un bouton pour retourner sur la page d'accueil avec un lien de navigation react-router-dom vers la page d'accueil
+
 export default function ErrorPage() {
     return (
         <div

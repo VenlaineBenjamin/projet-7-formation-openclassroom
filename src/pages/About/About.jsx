@@ -2,6 +2,8 @@ import aboutBanner from "../../../public/kalen-emsley-Bkci_8qcdvQ-unsplash 2abou
 import Collapse from "../../components/Collapse/Collapse";
 import styles from "./About.module.scss";
 
+// composant About qui affiche une bannière et des informations sur la fiabilité, le respect, le service et la sécurité de Kasa, utilisant le composant Collapse pour afficher les informations
+
 export default function About() {
     return (
         <div>

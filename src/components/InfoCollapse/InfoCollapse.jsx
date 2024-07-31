@@ -2,6 +2,8 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import styles from "./InfoCollapse.module.scss";
 
+// composant InfoCollapse qui prend en paramètre un titre et des enfants pour afficher un titre cliquable qui affiche ou masque les enfants
+
 export default function InfoCollapse({ title, children }) {
     const [isOpen, setIsOpen] = useState(false);
 
